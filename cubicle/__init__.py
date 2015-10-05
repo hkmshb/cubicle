@@ -1,0 +1,3 @@
+"""
+cubicle configuration
+"""
