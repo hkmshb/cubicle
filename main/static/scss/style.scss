@@ -1,0 +1,188 @@
+$about-color: #0985c7;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+body {
+    color: #333;
+    font-size: 65%;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    color: $about-color;
+}
+
+p, li {
+    font-size: 1.3em;
+    text-align: justify;
+    margin: 0;
+}
+
+p {
+    line-height: 1.7;
+    ~ p {
+        margin-top: 5px;
+    }
+} 
+
+li {
+    line-height: 1.2;
+}
+
+.container {
+    margin: 0 auto;
+    width: 965px;
+}
+
+header {
+    color: #fff;
+    background-color: #a2c939;
+    width: 94.8187%;
+    padding: 0 2.5907%;
+    margin-top: 6px;
+    
+    h1 {
+        font-size: 3.5em;
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        font-family: RobotoThin;
+        font-weight: lighter;
+        font-size: 2em;
+        margin-top: 0;
+    }
+}
+
+.sidebar {
+    float: left;
+    color: #fff;
+    width: 31.0881%;
+    text-align: center;
+    
+    h3 {
+        font-weight: lighter;
+        font-size: 2.5em;
+        line-height: 3em;
+        margin: 0;
+    }
+}
+
+.content {
+    float: right;
+    width: 58.5492%;
+    font-weight: lighter;
+    padding: 25px 5.1813% 50px;
+    
+    h3 {
+        font-weight: normal;
+        font-size: 1.8em;
+        margin: 20px auto 5px;
+    }
+    
+    h3:first-child {
+        margin-top: 10px;
+    }
+}
+
+footer {
+    clear: both;
+    padding: 6px;
+    background-color: #fff;
+    
+    p {
+        color: #000;
+        font-size: 1.2em;
+        line-height: 1;
+        margin: 1em;
+    }
+    
+    p:last-child {
+        margin-bottom: 50px;
+        display: block;
+    }
+}
+
+/* background colours */
+.about {
+    background-color: $about-color;
+    
+    .content {
+        background-color: lighten($about-color, 45%);
+    }
+}
+
+.what {
+    $color: #ef9885;
+    background-color: $color;
+    
+    .content {
+        background-color: lighten($color, 20%);
+    }
+}
+
+.contact {
+    $color: #b65ab6;
+    background-color: $color;
+    
+    .content {
+        background-color: lighten($color, 35%);
+    }
+}
+
+.notice {
+    $color: #ec9021;
+    background-color: $color;
+    
+    .content {
+        background-color: lighten($color, 30%);
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    p, li {
+        text-align: left;
+    }
+    
+    .wrapper {
+        width: 100%;
+    }
+    
+    .sidebar {
+        float: none;
+        padding: 0 2 2.5907%;
+        text-align: left;
+        width: 94.8186%;
+    }
+    
+    .content {
+        float: none;
+        width: 94.8186%;
+        padding: 25px 2.5907% 50px;
+    }
+}

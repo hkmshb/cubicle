@@ -1,2 +1,7 @@
+.settings/
+.sass-cache/
+
 *.py[co]
 .*project
+*.css.map
+style.css

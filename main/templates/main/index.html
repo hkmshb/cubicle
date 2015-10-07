@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{% block title %}Cubicle - Services for Photo Album Production{% endblock %}</title>
+    <meta name="author" content="Hazeltek Solutions">
+    <meta name="description" content="Cubicle website">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body id="{% block body-id %}body{% endblock %}">
+    <div class="container">
+        <header class="clearfix">
+            <h1>Cubicle</h1>
+            <h2>Services for Photo Album Production</h2>
+        </header>
+        <div class="page">
+            <div class="about clearfix">
+                <div class="sidebar">
+                    <h3>About Cubicle</h3>
+                </div>
+                <div class="content">
+                    <h3>What is it?</h3>
+                    <p>
+                    Cubicle is an online photo album production service that
+                    enables its users to participate in the photo album design
+                    process ranging from page design and layout to content
+                    determination and composition.
+                    </p>
+                    
+                    <h3>Target Audience</h3>
+                    <p>
+                        This service is particularly geared towards the production 
+                        of photo albums for graduating students of an institution
+                        of learning like:
+                        <ul>
+                            <li>Higher Institutions (Universities, Polytechnics, FCEs)</li>
+                            <li>Secondary Schools</li>
+                            <li>Primary Schools</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="what clearfix">
+                <div class="sidebar">
+                    <h3>What we provide</h3>
+                </div>
+                <div class="content">
+                    <h3>Peace of mind</h3>
+                    <p>
+                        We take way the hassle from trying to locate a provider
+                        for this service and save you the misgiving of engaging
+                        a printing press as is the common practice for lack of a 
+                        better alternative, for the job. Be rest assured, unlike 
+                        others whom do not have a dedicated offering for this
+                        service, <em>this is our business, this is what we do</em>
+                        and we have dedicated and specialised tooling to ensure
+                        your...
+                    </p>
+                    
+                    <h3>Satisfaction</h3>
+                    <p>
+                        Photo albums should not just be about individual profiles
+                        with few uninteresting details with a photograph slapped
+                        on top! We believe it should be so much more. We believe
+                        besides being pleasing to the eye and an interesting read
+                        it should be a fun capture and presentation of memories
+                        years past and a reference of sorts.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="contact clearfix">
+                <div class="sidebar">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="content">
+                    <p>
+                      Do not hesitate to contact us via email to discuss how
+                      Cubicle may meet the needs of your school, faculty or 
+                      department for graduating students.
+                    </p>
+                    
+                    <p>
+                        Email us at <a href="mailto:info@hazeltek.com">
+                        info@hazeltek.com</a>
+                    </p>
+                    
+                    <h3>Downloads</h3>
+                    <ul>
+                        <li><a href="downloads/photo.album-req.form.pdf" target="_blank">
+                            Photo Album Content Request Form</a></li>
+                        <li><a href="downloads/photo.album-prod.procedure.pdf" target="_blank">
+                            Photo Album Production Process</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="notice clearfix">
+                <div class="sidebar">
+                    <h3>Attention!</h3>
+                </div>
+                <div class="content">
+                    <h3>Underconstruction</h3>
+                    <p>
+                        This is a temporary page put up mainly to give a brief 
+                        overview of what Cubicle is and provide the request form 
+                        for download. The main website is under active development 
+                        and will be up and running soon hopefully.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2014 - {{ year }} Cubicle. All rights reserved.</p>
+            <p>
+                Cubile is a trademark of <a href="http://hazeltek.com">Hazeltek Solutions</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
