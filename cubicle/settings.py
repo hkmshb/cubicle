@@ -9,10 +9,25 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
+import os
+from django.core.exceptions import ImproperlyConfigured
+
+
+
+def get_env_var(name, default=None):
+    """Gets the named environment variable or returns the default if one is
+    provided otherwise it raises an exception.
+    """
+    try:
+        if default:
+            return os.environ.get(name, default)
+        return os.environ[name]
+    except KeyError:
+        error_msg = "Set the %s environment variable." % name
+        raise ImproperlyConfigured(error_msg)
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -23,8 +38,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$7*of&lh@u19o6ly_0k^hkix1e_h*)(l^j)4#ps^k%*@1^@7ch'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = get_env_var('CUBICLE_DEBUG', True)
+TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = []
 
 
